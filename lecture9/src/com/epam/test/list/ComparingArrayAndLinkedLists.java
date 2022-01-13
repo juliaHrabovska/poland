@@ -1,16 +1,13 @@
 package com.epam.test.list;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class ComparingArrayAndLinkedLists {
     public static void main(String[] args) {
-        exampleLinkedList();
-        exampleArrayList();
-//        getTimeMsOfInsert(new ArrayList());
-//        getTimeMsOfInsert(new LinkedList());
+//        exampleLinkedList();
+//        exampleArrayList();
+        getTimeMsOfInsert(new ArrayList<>());
+        getTimeMsOfInsert(new LinkedList<>());
     }
 
     private static void exampleLinkedList() {
@@ -35,25 +32,23 @@ public class ComparingArrayAndLinkedLists {
             list.add(i);
         }
 
-        long start=System.currentTimeMillis();
+        long start = System.currentTimeMillis();
 
-        for (int i=0;i<100;i++){
+        for (int i = 0; i < 100; i++) {
             list.add(2_000_000, Integer.MAX_VALUE);
         }
-        System.out.println("Time is needed for ArrayList (milliseconds) = " + (System.currentTimeMillis()-start));
+        System.out.println("Time is needed for ArrayList (milliseconds) = " + (System.currentTimeMillis() - start));
     }
 
-    public static long getTimeMsOfInsert(List list) {
+    public static void getTimeMsOfInsert(List<Object> list) {
         Date currentTime = new Date();
         insert1000000(list);
         Date newTime = new Date();
         long msDelay = newTime.getTime() - currentTime.getTime();
         System.out.println("Result in milliseconds: " + msDelay);
-        return msDelay;
-
     }
 
-    public static void insert1000000(List list) {
+    public static void insert1000000(List<Object> list) {
         for (int i = 0; i < 1000000; i++) {
             list.add(0, new Object());
         }

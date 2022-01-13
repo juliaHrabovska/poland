@@ -6,8 +6,8 @@ import java.util.List;
 public class LinkedListTest {
     public static void main(String[] args) {
 //        createLinkedList();
-        addFirstLast();
-        peekFirstLast();
+//        addFirstLast();
+//        peekFirstLast();
         pollFirstLast();
     }
 
@@ -31,14 +31,13 @@ public class LinkedListTest {
         public Car(String model) {
             this.model = model;
         }
+
         @Override
         public String toString() {
             return "Car{" +
                     "model='" + model + '\'' +
                     '}';
         }
-
-
     }
 
     private static void addFirstLast() {
