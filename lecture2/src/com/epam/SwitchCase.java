@@ -9,7 +9,7 @@ public class SwitchCase {
     }
 
     private static void example1() {
-        int month = 11;
+        int month = 6;
         String monthString;
         switch (month) {
             case 1:
@@ -56,7 +56,7 @@ public class SwitchCase {
     }
 
     private static void example2() {
-        String month = "November";
+        String month = "June";
         String season;
 
         switch (month) {
@@ -87,7 +87,7 @@ public class SwitchCase {
     }
 
     private static void example3() {
-        int month = 11;
+        int month = 6;
         String monthString = switch (month) {
             case 1 -> "January";
             case 2 -> "February";

@@ -3,16 +3,24 @@ package com.epam;
 public class IfElse {
 
     public static void main(String[] args) {
-        example1();
-        example2();
-        example3();
+//        example1();
+//        example2();
+//        example3();
         example4();
     }
 
-    private static void example1() { // simple if else statement
+    private static void example1() { // omitting the else part
+        int count = -10;
+
+        if (count < 3) {
+            System.out.println("Count is less then 3");
+        }
+    }
+
+    private static void example2() { // simple if else statement
 //        int count = 2;
-//        int count = 3;
-        int count = 4;
+        int count = 3;
+//        int count = 4;
         int total = 0;
 
         if (count < 3) {
@@ -25,37 +33,34 @@ public class IfElse {
         System.out.println(total);
     }
 
-    private static void example2() { // multiple statements
-        int count = 10;
+    private static void example3() { // multiple statements, else if
+        int count = 5;
         int total = 0;
 
         if (count < 3) {
             total = 0;
-        } else {
+        } else if (count == 5) {
             total = total + count;
             count = count - 1;
-//            count++";
 //            count--;
+        } else {
+            total = total - count;
+            count = count + 1;
+//            count++;
         }
         System.out.println(total);
     }
 
-    private static void example3() { // omitting the else part
-        int count = -10;
-
-        if (count < 3) {
-            System.out.println("Count is less then 3");
-        }
-    }
-
     private static void example4() { // ternary operator
         int hours = 8;
-        if (hours == 1) {
+        if (hours > 1) {
             System.out.print("You worked " + hours + " " + "hours");
         } else {
             System.out.print("You worked " + hours + " " + "hour");
-
         }
+
+        System.out.println();
+
         System.out.print("You worked " + hours + " " +
                 ((hours > 1) ? "hours" : "hour"));
     }

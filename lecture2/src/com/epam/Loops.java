@@ -1,6 +1,7 @@
 package com.epam;
 
 import java.util.List;
+import java.util.Scanner;
 
 import static java.util.Arrays.asList;
 
@@ -27,15 +28,6 @@ public class Loops {
     }
 
     private static void example2() {
-        int x = 10;
-
-        do {
-            System.out.println(x);
-            x++;
-        } while (x < 15);
-    }
-
-    private static void example3() {
         float i = 0.0f;
         while (true) {
             System.out.println(i);
@@ -56,9 +48,20 @@ public class Loops {
         }
     }
 
+    private static void example3() {
+        int x = 10;
+        Scanner scanner = new Scanner(System.in);
+        String result;
+        do {
+            result = scanner.nextLine();
+            System.out.println(result);
+//            x++;
+        } while (!result.equals("0"));
+    }
+
     private static void example4() {
         int min = 5;
-        for (int i = 4; i <= min; ++i) {
+        for (int i = 1; i <= 10; ++i) {
             System.out.println(i);
         }
 
