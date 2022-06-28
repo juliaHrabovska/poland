@@ -7,7 +7,7 @@ public abstract class AbstractPhone {
         this.year = year;
     }
 
-    public abstract void call(String outputNumber);
+    public abstract void call(String outputNumber) throws InterruptedException;
 
     public abstract void ring(String inputNumber);
 }

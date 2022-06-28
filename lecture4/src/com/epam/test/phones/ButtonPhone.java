@@ -12,9 +12,14 @@ public class ButtonPhone extends AbstractPhone {
     }
 
     @Override
-    public void call(String outputNumber) {
-        System.out.println("Dial the number");
-        System.out.println("Call");
+    public void call(String outputNumber) throws NumberFormatException { // add new Exception (Runtime exception)
+        try { // removing exception from throws section handling error by try catch bloc
+            System.out.println("Dial the number");
+            System.out.println("Call");
+            throw new InterruptedException(); // emulate the error
+        } catch (InterruptedException e) {
+            System.err.println("Something went wrong");
+        }
     }
 
     @Override
