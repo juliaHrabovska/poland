@@ -1,4 +1,4 @@
-package com.epam.test.innerclass.anonymousclass.comparator;
+package com.epam.test.innerclasses.innerclass.anonymousclass.comparator;
 
 import java.util.Comparator;
 import java.util.List;
@@ -12,10 +12,12 @@ public class PersonSort {
                 new Person("Daria", 20)
         );
 
+//        persons.sort(new PersonAgeComparator());
+//        System.out.println(persons);
         persons.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
     }
 
-    class PersonAgeComparator implements Comparator<Person> {
+    static class PersonAgeComparator implements Comparator<Person> {
         public int compare(Person a, Person b) {
             if (a.getAge() > b.getAge()) {
                 return 1;

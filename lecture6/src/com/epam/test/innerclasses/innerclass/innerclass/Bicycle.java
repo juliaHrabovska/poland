@@ -1,4 +1,4 @@
-package com.epam.test.innerclass.innerclass;
+package com.epam.test.innerclasses.innerclass.innerclass;
 
 public class Bicycle {
     private String model;
@@ -32,9 +32,10 @@ public class Bicycle {
         public void down() {
             System.out.println("The seat is lowered below");
         }
-//        public void getSeatParam() {
-//            System.out.println("Seat post diameter = " + Bicycle.this.seatPostDiameter);
-//        }
+
+        public void getSeatParam() {
+            System.out.println("Seat post diameter = " + Bicycle.this.seatPostDiameter);
+        }
 
 //        public static void getSeatParam() {
 //            System.out.println("Seat post diameter = " + Bicycle.this.seatPostDiameter);
@@ -42,7 +43,7 @@ public class Bicycle {
     }
 
 //    public static Seat createSeat() {
-//        //Bicycle.this cannot be referenced from a static context
+//        Bicycle.this cannot be referenced from a static context
 //        return new Seat();
 //    }
 }

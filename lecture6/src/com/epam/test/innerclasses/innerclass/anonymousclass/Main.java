@@ -1,4 +1,4 @@
-package com.epam.test.innerclass.anonymousclass;
+package com.epam.test.innerclasses.innerclass.anonymousclass;
 
 public class Main {
 
@@ -12,7 +12,7 @@ public class Main {
 //        securityModule.startMonitoring();
 //    }
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
         MonitoringSystem generalModule =
                 () -> System.out.println("General indicator monitoring has started");
 

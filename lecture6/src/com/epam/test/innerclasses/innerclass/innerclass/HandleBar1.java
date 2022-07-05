@@ -1,6 +1,7 @@
-package com.epam.test.innerclass.innerclass;
+package com.epam.test.innerclasses.innerclass.innerclass;
 
-public class HandleBar {
+public class HandleBar1 {
+
     public void right() {
         System.out.println("Turn right");
     }

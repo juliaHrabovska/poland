@@ -1,4 +1,4 @@
-package com.epam.test.innerclass.anonymousclass.comparator;
+package com.epam.test.innerclasses.innerclass.anonymousclass.comparator;
 
 public class Person {
     private String name;
@@ -16,4 +16,5 @@ public class Person {
     int getAge() {
         return age;
     }
+
 }

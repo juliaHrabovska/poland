@@ -1,13 +1,16 @@
-package com.epam.test.innerclass.localclass;
+package com.epam.test.innerclasses.innerclass.localclass;
 
 public class PhoneNumberValidator {
+    private final String polishCountryCode = "+48";
+    private static String phoneNumberRegex = "[^0-9]";
+
     public void validatePhoneNumber(String number) {
         int i = 0;
         class PhoneNumber {
             private String phoneNumber;
 
             public PhoneNumber() {
-                this.phoneNumber = number;
+                this.phoneNumber = polishCountryCode + number + i;
             }
 
             public String getPhoneNumber() {
@@ -15,12 +18,13 @@ public class PhoneNumberValidator {
             }
 
             public void setPhoneNumber(String phoneNumber) {
+                if (phoneNumberRegex.contains(phoneNumber)) {
+                    System.out.println();
+                }
                 this.phoneNumber = phoneNumber;
             }
         }    //...some code
     }
-
-
 
     {
         class PhoneNumber {
@@ -30,7 +34,6 @@ public class PhoneNumberValidator {
                 this.phoneNumber = phoneNumber;
             }
         }
-
     }
 
     public void validatePhoneNumber1(String phoneNumber) {
@@ -51,9 +54,4 @@ public class PhoneNumberValidator {
 //    public PhoneNumber generatePhoneNumber() {
 //
 //    }
-
-    final String polishCountryCode = "+48";
-    private static String phoneNumberRegex = "[^0-9]";
-
 }
-

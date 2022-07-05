@@ -1,6 +1,4 @@
-package com.epam.test.staticclass;
-
-import com.epam.test.innerclass.innerclass.Bicycle;
+package com.epam.test.innerclasses.staticclass;
 
 public class Boeing737 {
     private int manufactureYear;
@@ -21,6 +19,10 @@ public class Boeing737 {
             this.id = id;
         }
 
+        public int getId() {
+            return id;
+        }
+
         public static int getPassengersCount() {
             return maxPassengersCount;
         }
@@ -33,8 +35,10 @@ public class Boeing737 {
         }
 
         public static void main(String[] args) {
+//            Bicycle mtb = new Bicycle("MTB", 120);
+//            Bicycle.HandleBar handleBar = mtb.new HandleBar();
             for (int i = 1; i < 6; i++) {
-                Boeing737.Drawing drawing = new Boeing737.Drawing(i);
+                Drawing drawing = new Drawing(i);
                 System.out.println(drawing);
             }
         }

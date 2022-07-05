@@ -1,6 +1,4 @@
-package com.epam.test;
-
-import com.epam.test.innerclass.innerclass.Bicycle;
+package com.epam.test.innerclasses.innerclass.innerclass;
 
 public class Main {
 
